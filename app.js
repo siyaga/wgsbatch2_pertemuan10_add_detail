@@ -1,6 +1,7 @@
 const express = require('express')
 const expressEjsLayouts = require('express-ejs-layouts')
 const fs = require('fs')
+// panggil contacts fungsion
 const {loadContact, findContact} = require('./utils/contacts')
 const morgan = require('morgan')
 const app = express()
@@ -46,7 +47,7 @@ const port = 3000
     app.get('/contact/:name', (req, res) => {
         const contact = findContact(req.params.name)
         
-        res.render('detail', {title : "Contact", layout : "layout/main-layout",contact})
+        res.render('detail', {title : contact.name, layout : "layout/main-layout",contact})
     })
 
     //Membuat reques
