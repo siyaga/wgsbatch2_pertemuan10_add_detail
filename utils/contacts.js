@@ -20,8 +20,8 @@ const loadContact = ()=> {
     return contacts;
 }
 
-// Cari contact berdasarkan nama
-const findContact =(name)=> {
+// Cari contact berdasarkan nama untuk detail
+const findDetailContact =(name)=> {
     const contacts = loadContact();
 
     const contact = contacts.find(
@@ -30,4 +30,4 @@ const findContact =(name)=> {
     return contact;
 }
 
-module.exports = {loadContact, findContact}
+module.exports = {loadContact, findDetailContact}
